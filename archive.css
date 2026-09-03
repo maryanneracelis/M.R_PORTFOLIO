@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: System-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* GRADIENT AND LAYER BLUR EFFECT */
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+/* DIGITAL ARCHIVE */
+.archive-page {
+    min-height: 100vh;
+    background: transparent;
+    color: #e7e7e7;
+    position: relative;
+    overflow: visible;
+}
+
+/* HEADER */
+.archive-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    position: relative;
+}
+
+.archive-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, lightpink, #656565);
+    box-shadow: 0 0 8px rgba(139, 53, 255, 0.5);
+    animation: headerLine 3.5s ease forwards;
+}
+
+.back-button {
+    text-decoration: none;
+    border: 1.8px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.11rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background: #a7a7a742;
+    color: white;
+}
+
+.archive-header nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: 5%;
+}
+
+.archive-header nav a {
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    z-index: 999;
+}
+
+.archive-header nav a:hover {
+    color: #a7a7a7;
+}
+
+/* MAIN */
+.archive-main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+/* HEADING */
+.archive-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    transition: background-color;
+    z-index: 999;
+}
+
+.archive-heading > p:first-child {
+    color: #a94cff;
+    letter-spacing: 0.15rem;
+    font-size: 0.8rem;
+    transition: background-color;
+    z-index: 999;
+}
+
+.archive-heading h1 {
+    font-size: 3rem;
+    margin: 0.7rem 0;
+    font-weight: 600;
+    transition: background-color;
+    z-index: 999;
+}
+
+.archive-heading h1 span {
+    color: #9b3cff;
+    text-shadow:
+        0 0 10px #8b35ff,
+        0 0 25px rgba(139, 53, 255, 0.5);
+    transition: background-color;
+    z-index: 999;
+}
+
+.heading-line {
+    width: 250px;
+    height: 1px;
+    margin: 1rem auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #9b3cff,
+        transparent
+    );
+    box-shadow:0 0 10px #8b35ff;
+    transition: background-color;
+    z-index: 999;
+}
+
+.archive-description {
+    color: gray;
+    max-width: 40rem;
+    margin-left: 10%;
+    transition: background-color;
+    font-size: 1.2rem;
+    z-index: 999;
+}
+
+/* FOLDER CONTAINER */
+.folder-container {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ANIMATED FOLDER BORDER */
+.folder-border {
+    position: relative;
+    width: 280px;
+    height: 330px;
+    padding: 3px;
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            to right,
+            #656565,
+            #7f42a7,
+            #6600c5,
+            #5300a0,
+            #757575,
+            #656565
+        );
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow:0 0 15px rgba(139, 53, 255, 0.3);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+/* INNER FOLDER CARD */
+.folder-card {
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* FOLDER ICON - CLEAN VERSION */
+.folder-border {
+    transition: 
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* FOLDER HOVER / OLD ANIMATION */
+.folder-border:hover {
+    box-shadow:
+        0 0 15px rgba(158, 92, 245, 0.8),
+        0 0 35px rgba(139, 53, 255, 0.5),
+        0 0 70px rgba(139, 53, 255, 0.25);
+    transform: translateY(-12px);
+}
+
+.folder-border:hover .folder-back {
+    transform:
+        skewY(-2deg)
+        rotateX(18deg)
+        translateY(-6px);
+}
+
+/* FOLDER ICON */
+.folder-icon {
+    position: relative;
+    width: 105px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+}
+
+/* FOLDER BACK */
+.folder-back {
+    position: absolute;
+    width: 95px;
+    height: 65px;
+    left: 5px;
+    top: 5px;
+    background: linear-gradient(
+        145deg,
+        #e6f9ff,
+        #6c7172
+    );
+    border-radius: 7px;
+    box-shadow: 0 0 2px #c3d7dd;
+    transform: skewY(-2deg);
+    z-index: 1;
+    transition: transform 0.45s ease;
+}
+
+/* FOLDER TAB */
+.folder-back::before {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 15px;
+    left: 5px;
+    top: -13px;
+    background: #38a7c9;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 2px #38a7c9;
+}
+
+/* FOLDER FRONT */
+.folder-front {
+    position: absolute;
+    width: 105px;
+    height: 52px;
+    left: 0;
+    top: 21px;
+    background: linear-gradient(
+        145deg,
+        #38a7c9,
+        #145063
+    );
+    border-radius: 6px;
+    box-shadow: 0 0 2px #38a7c9;
+    z-index: 2;
+}
+
+/* OLD FOLDER HOVER ANIMATION */
+.folder-border {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.folder-border:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 0 15px rgba(158, 92, 245, 0.8),
+        0 0 35px rgba(139, 53, 255, 0.5),
+        0 0 70px rgba(139, 53, 255, 0.25);
+}
+
+.folder-border:hover .folder-back {
+    transform:
+        skewY(-2deg)
+        rotateX(18deg)
+        translateY(-6px);
+}
+
+/* FOLDER TEXT */
+.folder-card h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.08rem;
+    margin-bottom: 0.7rem;
+}
+
+.folder-card p {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 190px;
+    margin-bottom: 1.5rem;
+}
+
+/* OPEN BUTTON */
+.folder-card a {
+    text-decoration: none;
+    color: #b45cff;
+    border: 1px solid #8b35ff;
+    padding: 0.55rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 0.08rem;
+    transition: 0.3s ease;
+}
+
+.folder-card a:hover {
+    background: #a7a7a713;
+    color: white;
+}
+
+/* FILE PAGE */
+.files-main {
+    min-height: calc(65vh - 40px);
+    padding: 3rem 5rem;
+}
+
+/* FILE HEADING */
+.files-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #b45cff;
+    border: 1px solid #6820a0;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(139, 53, 255, 0.15);
+    box-shadow: 0 0 15px rgba(139, 53, 255, 0.4);
+}
+
+.files-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.files-title p {
+    color: #777;
+    font-size: 1.7rem;
+}
+
+.files-title h1 {
+    font-size: 2.5rem;
+    color: #d8d7d7;
+    font-weight: 700;
+}
+
+/* TOOLBAR */
+.file-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.file-toolbar p {
+    color: #aaa;
+    font-size: 1.2rem;
+}
+
+/* FILE GRID */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* FILE CARD */
+.file-card {
+    min-height: 190px;
+    padding: 1rem;
+    background: #070707;
+    border: 1px solid #401064;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.file-card:hover {
+    border-color: #9b3cff;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(139, 53, 255, 0.3);
+}
+
+/* CARD TOP */
+.file-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.file-icon {
+    font-size: 2.2rem;
+}
+
+/* FILE INFORMATION */
+.file-card h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.3rem;
+}
+
+.file-type {
+    color: #888;
+    font-size: 0.75rem;
+}
+
+.file-date {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.file-icon {
+    width: 42px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-icon img {
+    width: 35px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.file-card:hover .file-icon img {
+    opacity: 1;
+}
+
+/* VIEW BUTTON */
+.file-actions {
+    margin-top: 1rem;
+}
+
+.view-button {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #6520a0;
+    color: #b45cff;
+    padding: 0.45rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.view-button:hover {
+    background: #a7a7a70e;
+    color: white;
+}
+
+/* EMPTY STATE */
+.empty-state {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #35104f;
+    border-radius: 15px;
+    color: #666;
+}
+
+.empty-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d29b5;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #9b3cff;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px rgba(139, 53, 255, 0.3);
+}
+
+.empty-state h2 {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    font-size: 0.8rem;
+}
+
+
+/* Main archive area */
+.archive-container {
+    width: 100%;
+    min-height: auto;
+    padding: 20px 20px 60px;
+    box-sizing: border-box;
+}
+
+/* Archive heading */
+.archive-content {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+    margin: 0;
+}
+
+.archive-content h1 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.archive-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 15px auto 35px;
+}
+
+/* FOLDER GRID */
+.folder-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+/* FOLDER CARD */
+.folder-card {
+    width: 100%;
+    min-height: 230px;
+    box-sizing: border-box;
+}
+
+/* PUBLIC VIEWER MODE */
+
+/*
+    When the website is opened online,
+    visitors can only view files.
+*/
+
+.viewer-mode .add-file-button,
+.viewer-mode .delete-button,
+.viewer-mode .delete-btn,
+.viewer-mode .trash-button,
+.viewer-mode input[type="file"] {
+
+    display: none !important;
+}

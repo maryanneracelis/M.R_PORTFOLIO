@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Archive | Racelis Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+
+            <header ata-aos="fade-down" data-aos-duration="2000" class="front-header">
+                
+                <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">M.R PORTFOLIO</h1>
+
+        <img data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000"
+            src="images/profile-button.png"
+            alt="Profile"
+            class="profile-button"
+            id="openProfile">
+            </header>
+
+        <main>
+            <div class="content">
+                <div data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-back"
+                     data-aos-delay="300"
+                     data-aos-offset="0" data-aos-duration="1500" class="tag-box">
+                    <div class="tag">DCIT 26</div>
+                </div>
+
+                <h1 data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-back"
+                     data-aos-delay="300"
+                     data-aos-offset="0" data-aos-duration="2000">ABOUT PORTFOLIO</h1>
+
+                <p data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-back"
+                     data-aos-delay="300"
+                     data-aos-offset="0" data-aos-duration="2500" class="description">
+                    This portfolio was created to compile and organize the activities, quizzes, projects, and other works completed for this subject. 
+                    It serves as a collection of my learning experiences and outputs throughout the course.
+                </p>
+
+                <div data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-back"
+                     data-aos-delay="300"
+                     data-aos-offset="0" data-aos-duration="3000" class="buttons">
+                    <a href="archive.html" class="btn-get-started">Get Started</a>
+                </div>
+            </div>
+        </main>
+
+        <spline-viewer data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-back"
+                     data-aos-delay="300"
+                     data-aos-offset="0" data-aos-duration="3000" class="robot-3d" url="https://prod.spline.design/hsObdulY8Xpj5MvT/scene.splinecode"></spline-viewer>
+    </div>
+
+
+    <!-- STUDENT PROFILE POPUP -->
+
+        <div class="profile-overlay" id="profileOverlay">
+
+            <div class="profile-popup">
+
+                <button
+                    class="profile-close"
+                    id="closeProfile">×</button>
+
+                <div class="profile-popup-header">
+                    <span class="profile-status"></span>
+                    DIGITAL STUDENT PROFILE
+                </div>
+
+                <div class="profile-popup-content">
+
+                    <!-- PHOTO -->
+
+                    <div class="profile-photo">
+                        <img
+                            src="images/profile.png"
+                            alt="Profile Photo">
+                    </div>
+
+
+                    <!-- INFORMATION -->
+
+                    <div class="profile-details">
+
+                        <p class="profile-small-title">STUDENT PROFILE</p>
+
+                        <h2>MARY ANNE P. RACELIS</h2>
+
+                        <p class="student-number">
+                            STUDENT NO. 202410141
+                        </p>
+
+                        <!-- PROFILE -->
+
+                        <div class="profile-section">
+
+                            <h3>PROFILE</h3>
+
+                            <p>
+                                I am currently a student at the Cavite State University--Silang Campus.
+                                I'm taking BS in Computer Science.
+                                I am currently interested in front-end design, game development, and robotics.
+                                I want to be rich and live in the province when I retire.
+                            </p>
+
+                        </div>
+
+
+                        <!-- CONTACT -->
+
+                        <div class="profile-section">
+
+                            <h3>CONTACT</h3>
+
+                            <div class="profile-contacts">
+
+                            <a href="mailto:maryanne.racelis@cvsu.edu.ph">
+                                <img
+                                    class="contact-icon"
+                                    src="images/mail.png"
+                                    alt="Email">
+
+                                <span>maryanne.racelis@cvsu.edu.ph</span>
+                            </a>
+
+
+                            <a href="https://github.com/maryanneracelis" target="_blank">
+                                <img
+                                    class="contact-icon"
+                                    src="images/github.png"
+                                    alt="GitHub">
+
+                                <span>GitHub</span>
+                            </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENT -->
+
+                <div class="profile-documents">
+
+                    <div class="profile-document-card">
+
+                        <div class="profile-document-icon">
+                            <img
+                                src="images/document.png"
+                                alt="Certificate of Enrollment">
+                        </div>
+
+                        <div class="profile-document-info">
+                            <strong>CERTIFICATE OF ENROLLMENT</strong>
+                            <span> A.Y. 2026 - 2027</span>
+                            <span>1st Semester</span>
+                        </div>
+
+
+                    <a
+                        href="documents/Certificate-of-enrollment.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="profile-view-document">
+
+                        VIEW DOCUMENT
+                    </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="module" src="https://cdn.spline.design/@splinetool/viewer@2.0.14/build/spline-viewer.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>AOS.init();</script>
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* FIND PROFILE BUTTON */
+
+                const openProfile =
+                    document.getElementById(
+                        "openProfile"
+                    );
+
+
+                /* FIND CLOSE BUTTON */
+
+                const closeProfile =
+                    document.getElementById(
+                        "closeProfile"
+                    );
+
+
+                /* FIND POPUP */
+
+                const profileOverlay =
+                    document.getElementById(
+                        "profileOverlay"
+                    );
+
+                openProfile.addEventListener(
+                    "click",
+                    function () {
+
+                        profileOverlay.classList.add(
+                            "active"
+                        );
+
+                    }
+                );
+
+                closeProfile.addEventListener(
+                    "click",
+                    function () {
+
+                        profileOverlay.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+                profileOverlay.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (
+                            event.target ===
+                            profileOverlay
+                        ) {
+
+                            profileOverlay.classList.remove(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape"
+                        ) {
+
+                            profileOverlay.classList.remove(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
