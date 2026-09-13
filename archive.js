@@ -26,16 +26,20 @@ const portfolioFiles = {
     /* ACTIVITIES */
     activities: [
 
+        {
         name: "Activity 1",
-        type: "PDF",
+        type: "pdf",
         date: "September 13, 2026",
         path: "activities/RACELIS_COMPREHENSIVE REPORT_DCIT26.pdf"
-        
+        },
+
+        {
         name: "Activity 2",
-        type: "PDF",
+        type: "pdf",
         date: "September 13, 2026",
         path: "activities/RACELIS_COMPREHENSIVE INTERVIEW GUIDE.pdf"
-
+        }
+        
     ],
 
 
