@@ -27,14 +27,14 @@ const portfolioFiles = {
     activities: [
 
         {
-        name: "Activity 1",
+        name: "Activity 1: Comprehensive Report",
         type: "pdf",
         date: "September 13, 2026",
         path: "activities/RACELIS_COMPREHENSIVE REPORT_DCIT26.pdf"
         },
 
         {
-        name: "Activity 2",
+        name: "Activity 2: Comprehensive Interview Guide",
         type: "pdf",
         date: "September 13, 2026",
         path: "activities/RACELIS_COMPREHENSIVE INTERVIEW GUIDE.pdf"
