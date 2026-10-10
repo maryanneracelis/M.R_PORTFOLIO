@@ -11,7 +11,7 @@ if (currentPage === "quizzes.html") {
 }
 
 if (currentPage === "projects_and_examinations.html") {
-    currentCategory = "projects and examinations";
+    currentCategory = "projects_and_examinations";
 }
 
 
@@ -59,7 +59,7 @@ const portfolioFiles = {
 
         {
         name: "DCIT 26 Midterm Examination",
-        type: "jpg",
+        type: "image",
         date: "October 10, 2026",
         path: "projects_and_examinations/Midterm Examination.jpg"
         }
