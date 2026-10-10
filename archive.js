@@ -15,7 +15,6 @@ if (currentPage === "projects_and_examinations.html") {
 }
 
 
-
 /* PORTFOLIO FILES */
 
 /*ACTIVITIES*/
@@ -24,6 +23,7 @@ if (currentPage === "projects_and_examinations.html") {
 
 /*PROJECTS AND EXAMINATIONS*/
 "projects_and_examinations/Midterm Examination.jpg"
+
 
 const portfolioFiles = {
 
