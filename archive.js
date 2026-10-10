@@ -51,10 +51,14 @@ const portfolioFiles = {
     ],
 
     /* PROJECTS & LABORATORIES */
-    projects: [
+    projects_and_examinations: [
 
-        
-
+        {
+        name: "DCIT 26 Midterm Examination",
+        type: "jpg",
+        date: "October 10, 2026",
+        path: "projects_and_examinations/Midterm Examination.jpg"
+        }
 
     ]
 };
