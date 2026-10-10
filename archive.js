@@ -10,8 +10,8 @@ if (currentPage === "quizzes.html") {
     currentCategory = "quizzes";
 }
 
-if (currentPage === "projects.html") {
-    currentCategory = "projects";
+if (currentPage === "projects_and_examinations.html") {
+    currentCategory = "projects and examinations";
 }
 
 
@@ -50,7 +50,7 @@ const portfolioFiles = {
 
     ],
 
-    /* PROJECTS & LABORATORIES */
+    /* PROJECTS & EXAMINATIONS */
     projects_and_examinations: [
 
         {
