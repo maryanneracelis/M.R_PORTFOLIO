@@ -18,8 +18,12 @@ if (currentPage === "projects_and_examinations.html") {
 
 /* PORTFOLIO FILES */
 
+/*ACTIVITIES*/
 "activities/RACELIS_COMPREHENSIVE REPORT_DCIT26.pdf"
 "activities/RACELIS_COMPREHENSIVE INTERVIEW GUIDE.pdf"
+
+/*PROJECTS AND EXAMINATIONS*/
+"projects_and_examinations/Midterm Examination.jpg"
 
 const portfolioFiles = {
 
