@@ -24,6 +24,11 @@ if (currentPage === "projects_and_examinations.html") {
 /*PROJECTS AND EXAMINATIONS*/
 "projects_and_examinations/Midterm Examination.jpg"
 
+/*QUIZZES*/
+"quizzes/Long Quiz.png"
+"quizzes/Quiz 1.png"
+"quizzes/Quiz 2.png"
+"quizzes/Quiz 3.png"
 
 const portfolioFiles = {
 
@@ -50,9 +55,36 @@ const portfolioFiles = {
     /* QUIZZES */
     quizzes: [
 
-        
+    {
+        name: "First Semester: Quiz 1",
+        type: "image",
+        date: "October 8, 2026",
+        path: "quizzes/Quiz 1.png"
+    },
+
+    {
+        name: "First Semester: Quiz 2",
+        type: "image",
+        date: "October 9, 2026",
+        path: "quizzes/Quiz 2.png"
+    },
+
+    {
+        name: "First Semester: Quiz 3",
+        type: "image",
+        date: "October 9, 2026",
+        path: "quizzes/Quiz 3.png"
+    },
+
+    {
+        name: "First Semester: Long Quiz",
+        type: "image",
+        date: "October 11, 2026",
+        path: "quizzes/Long Quiz.png"
+    }
 
     ],
+    
 
     /* PROJECTS & EXAMINATIONS */
     projects_and_examinations: [
